@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kestrel station</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="favicon.png" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d0ec9a33f4.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <script src="index.js" defer></script>
+        <link rel="icon" type="image/png" href="logo.png">
+    </head>
+    <body>
+        <div id="preloader">
+            <div class="preloader-content">
+                <img src="preloader.gif" alt="Loading..." id="gif">
+                <h2 class="preloader-text">Loading Archive...</h2>
+                <h2 class="preloader-text">For better experience, Turn your volume up</h2>
+            </div>
+        </div>
+        <div id="sound-modal" class="sound-modal">
+            <div class="modal-content">
+                <h2>Warning: Audio Content</h2>
+                <p>This site contains audio content. Enable sound for the full experience?</p>
+                <div class="modal-buttons">
+                    <button id="enable-sound-btn" class="btn-enable">Enable sound</button>
+                    <button id="dismiss-sound-btn" class="btn-dismiss">Dismiss</button>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="logo.png" id="logo">
+                </a>
+            </div>
+            <div class="the-rest">
+                <div class="darkmodetogglecontainer">
+                    <input type="checkbox" id="darkmode-toggle">
+                    <label for="darkmode-toggle"></label>
+                    <span class="toggle-ball"></span>
+                </div>
+                <div class="soundtogglecontainer">
+                    <input type="checkbox" id="sound-toggle" onclick="toggleSound()">
+                    <label for="sound-toggle" class="sound-toggle-class"></label>
+                </div>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="headline_Kestrel_station">
+                <h1 id="headline_Kestrel_stationhash">Kestrel station</h1>
+                <h2 id="headline_Kestrel_stationhash">Official Investigation Archive</h2>
+                <h2 id="headline_Kestrel_stationhash">Recovered after the events of 7 May 2001</h2>
+                <h2 id="headline_Kestrel_stationhash">Access level: Public</h2>
+            </div>
+            <div class="button">
+                <a href="#timelineforbutton">
+                    <button type="button" id="Button_Seefullarchive">See full archive</button>
+                </a>
+            </div>
+        </div>
+        <div id="black_overlay"></div>
+        <div class="intro-to-timeline">
+            <h2>This case passed through much stages and strange intervals that will be shown in the following timeline</h2>
+        </div>
+        <div class="timeline" id="timelineforbutton">
+            <div class="container container-left">
+                <img src="logo.png">
+                <div class="text-boxes">
+                    <small>1966</small>
+                    <h2>Station Kestrel founded</h2>
+                    <p>A small international scientific base is established in Antarctica by a Mexican research team.</p>
+                    <div class="explanation-box">Foundation</div>
+                    <span id="leftdirectionarrow"></span>
+                </div>
+            </div>
+            <div class="container container-right">
+                <img src="logo.png">
+                <div class="text-boxes">
+                    <small>June 2, 1972</small>
+                    <h2>Station becomes operational</h2>
+                    <p>The station officially opens and begins research on climate change, ice cores, atmospheric chemistry, aurora australis, glaciers, and seismic activity. Operations rotate 18 scientists in summer, 9 in winter.</p>
+                    <div class="explanation-box">Operations Begin</div>
+                    <span id="rightdirectionarrow"></span>
+                </div>
+            </div>
+            <div class="container container-left">
+                <img src="logo.png">
+                <div class="text-boxes">
+                    <small>1972 to 2001</small>
+                    <h2>Strange phenomena documented</h2>
+                    <p>For 29 years, scientists report mysterious occurrences: encounters with people they feel they know but have never met, hearing voices warning them to leave, sightings of a black dog speaking in an unknown language, and phantom helicopter sounds with no visible aircraft.</p>
+                    <div class="explanation-box">Unexplained</div>
+                    <div class="explanation-box">Ongoing</div>
+                    <span id="leftdirectionarrow"></span>
+                </div>
+            </div>
+            <div class="container container-right">
+                <img src="logo.png">
+                <div class="text-boxes">
+                    <small>Before May 7, 2001</small>
+                    <h2 id="headbox">Cryptic photograph sent</h2>
+                    <p>A scientist sends a photograph of himself holding a severed octopus head to the Mexico station without explanation. Days later, his roommate is found dead, suspected poisoning.</p>
+                    <div class="explanation-box">Death</div>
+                    <div class="explanation-box">Unexplained</div>
+                    <span id="rightdirectionarrow"></span>
+                </div>
+            </div>
+            <div class="container container-left">
+                <img src="logo.png">
+                <div class="text-boxes">
+                    <small>May 7, 2001</small>
+                    <h2>Communication lost</h2>
+                    <p>Connection to Station Kestrel is abruptly cut during transmission of a documentary about Antarctic geology. The Mexico station attempts reconnection repeatedly without success.</p>
+                    <div class="explanation-box">Emergency</div>
+                    <span id="leftdirectionarrow"></span>
+                </div>
+            </div>
+            <div class="container container-right">
+                <img src="logo.png">
+                <div class="text-boxes">
+                    <small>May 8, 2001</small>
+                    <h2>Rescue plane dispatched</h2>
+                    <p>The Mexico team sends a plane to Antarctica. Upon arrival, the rescue team finds the station abandoned—no scientists, no food supplies, no equipment.</p>
+                    <div class="explanation-box">Disappearance</div>
+                    <span id="rightdirectionarrow"></span>
+                </div>
+            </div>
+            <div class="container container-left">
+                <img src="logo.png">
+                <div class="text-boxes">
+                    <small>May 2001 (one month later)</small>
+                    <h2>Bodies discovered</h2>
+                    <p>After an extensive month-long search, all scientists are found drowned in the ocean. Their food supplies are recovered with them, despite having no diving or search equipment.</p>
+                    <div class="explanation-box">Deaths</div>
+                    <span id="leftdirectionarrow"></span>
+                </div>
+            </div>
+        </div>
+        <div class="background"></div>
+            <div class="Meet-the-team">
+        <div class="textmeet">
+            <h2>Scientists of Kestrel Station</h2>
+        </div>
+        <div class="containers-rotating">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="scientist2.jpg" alt="Geologist" class="scientist-img">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Dr. Marcus Chen</h3>
+                        <p class="field">Geology</p>
+                        <p class="description">Specializes in glacial geomorphology and seismic activity monitoring in polar regions.</p>
+                        <p class="expertise">Expertise: Ice core analysis, Tectonic mapping</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="scientist1.jpg" alt="Chemist" class="scientist-img">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Dr. Elena Vasquez</h3>
+                        <p class="field">Chemistry</p>
+                        <p class="description">Researches atmospheric chemistry and chemical composition of Antarctic ice.</p>
+                        <p class="expertise">Expertise: Atmospheric analysis, Isotope chemistry</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="scientist4.jpg" alt="Physicist" class="scientist-img">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Dr. James Morrison</h3>
+                        <p class="field">Physics</p>
+                        <p class="description">Studies aurora australis phenomena and ionospheric interactions in Antarctica.</p>
+                        <p class="expertise">Expertise: Aurora dynamics, Electromagnetic fields</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="scientist3.jpg" alt="Biologist" class="scientist-img">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Dr. Sofia Rodriguez</h3>
+                        <p class="field">Biology</p>
+                        <p class="description">Investigates extremophile organisms and marine life in Antarctic waters.</p>
+                        <p class="expertise">Expertise: Microbiology, Marine ecology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Station Kestrel</h3>
+                <p>Official Investigation Archive</p>
+                <p>Recovered after the events of 7 May 2001</p>
+            </div>
+            <div class="footer-section">
+                <h3>Send us your findings</h3>
+                <form class="footer-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-input textarea" placeholder="Message" rows="3" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2001 - 2026 Station Kestrel Archive. Access Level: Public.</p>
+            <p>All findings and documentation are official records.</p>
+        </div>
+    </footer>
+    </body>
+</html>
