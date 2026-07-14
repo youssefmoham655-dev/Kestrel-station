@@ -1,5 +1,5 @@
 # Kestrel-station
-Station Kestrel Archive is a fictional horror website that borrows from found-footage films and psychological horror, presented as an investigative case archive.
+Station Kestrel is a fictional horror website that borrows from psychological horror, presented as an investigative case archive.
 ### Current features:
 * Home page
 * On/off sound toggle
@@ -18,3 +18,8 @@ Station Kestrel Archive is a fictional horror website that borrows from found-fo
 * Javascript
 ### Live Demo
 [Live Demo](https://kestrel-station.vercel.app/)
+### Screenshots:
+![screenshot 1](screenshot1.png)
+![screenshot 2](screenshot2.png)
+![screenshot 3](screenshot3.png)
+![screenshot 4](screenshot4.png)
